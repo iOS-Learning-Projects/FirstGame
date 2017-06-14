@@ -25,13 +25,37 @@ class Player: SKSpriteNode, GameObject {
         self.position = position
         self.setScale(4)
         self.texture?.filteringMode = .nearest
+        
+        self.physicsBody = self.setupPhysicsBody(objectSize: self.size)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupPhysicsBody(objectSize: CGSize) -> SKPhysicsBody {
-        return SKPhysicsBody()
+//    func setupPhysicsBody(objectSize: CGSize) -> SKPhysicsBody {
+//        return SKPhysicsBody()
+//    }
+
+    func moveToPosition(_ position: CGPoint) {
+        let positionLimitedInX = CGPoint(x: position.x, y: self.position.y)
+        let xDistance = position.x - self.position.x
+
+        if xDistance < 0 && self.inverted == false {
+            self.inverted = true
+            self.xScale = self.xScale * -1
+        } else if xDistance > 0 && self.inverted == true {
+            self.inverted = false
+            self.xScale = self.xScale * -1
+        }
+
+        let moveAction = SKAction.move(to: positionLimitedInX, duration: 5)
+
+        self.run(moveAction)
+    }
+
+    func disappear() {
+        let fadeAction = SKAction.fadeAlpha(to: 0, duration: 5)
+        self.run(fadeAction)
     }
 }

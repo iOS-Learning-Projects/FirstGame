@@ -20,6 +20,9 @@ class GameScene: SKScene {
         self.addChild(self.gameLayer!)
         self.addChild(self.hudLayer!)
         self.addChild(self.backgroundLayer!)
+
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        self.physicsWorld.contactDelegate = self
     }
 
     override init(size: CGSize) {
@@ -35,13 +38,14 @@ class GameScene: SKScene {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.gameLayer?.touchesBegan(touches, with: event)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        self.gameLayer?.touchesMoved(touches, with: event)
     }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-
+        self.gameLayer?.touchesEnded(touches, with: event)
     }
 }

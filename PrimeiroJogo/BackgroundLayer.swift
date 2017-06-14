@@ -10,7 +10,6 @@ import Foundation
 import SpriteKit
 
 class BackgroundLayer: SKNode {
-
     var layers = [Background]()
 
     init(sceneSize: CGSize) {
@@ -32,7 +31,7 @@ class BackgroundLayer: SKNode {
                 texture: SKTexture(imageNamed: "Snow_Layer_0\(i)"))
 
             snowBackground.zPosition = CGFloat(i)
-            snowBackground.setScale(1.65)
+            snowBackground.setScale(1.5)
 
             self.layers.append(snowBackground)
             self.addChild(snowBackground)

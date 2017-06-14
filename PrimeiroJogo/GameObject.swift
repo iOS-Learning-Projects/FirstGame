@@ -25,7 +25,19 @@ protocol GameObject {
     func setupPhysicsBody(objectSize: CGSize) -> SKPhysicsBody
 }
 
+extension GameObject {
+    func setupPhysicsBody(objectSize: CGSize) -> SKPhysicsBody {
+        let physicsBody = SKPhysicsBody(rectangleOf: objectSize)
+
+        return physicsBody
+    }
+}
+
 protocol GameObjectDelegate {
     func didBeginContact(with node: SKNode, contact: SKPhysicsContact)
     func didEndContact(with node: SKNode, contact: SKPhysicsContact)
+}
+
+enum PhysicsCategory: UInt32 {
+    case None = 0, Player, Enemy, Floor
 }
