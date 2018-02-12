@@ -13,9 +13,19 @@ class HUDLayer: SKNode {
 
     init(sceneSize: CGSize) {
         super.init()
+
+        self.createHUDLayer()
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func createHUDLayer() {
+        let timeCounterLabel = SKLabelNode(text: "10s")
+        timeCounterLabel.position = CGPoint(x: 20, y: 100)
+
+
+        self.addChild(timeCounterLabel)
     }
 }

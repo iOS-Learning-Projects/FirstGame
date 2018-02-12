@@ -27,6 +27,8 @@ class Player: SKSpriteNode, GameObject {
         self.texture?.filteringMode = .nearest
         
         self.physicsBody = self.setupPhysicsBody(objectSize: self.size)
+
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

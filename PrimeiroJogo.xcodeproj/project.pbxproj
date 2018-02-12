@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		E80F0B181EF0722B0086ACC8 /* GameScene+SKPhysicsContactDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80F0B171EF0722B0086ACC8 /* GameScene+SKPhysicsContactDelegate.swift */; };
 		E80F0B1A1EF0733E0086ACC8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80F0B191EF0733E0086ACC8 /* Friend.swift */; };
+		E8183A271EF1BAAA00FFBA8C /* SnowParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8183A261EF1BAAA00FFBA8C /* SnowParticle.sks */; };
+		E8183A291EF1C09200FFBA8C /* FireParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8183A281EF1C09200FFBA8C /* FireParticle.sks */; };
+		E8183A2B1EF1C13C00FFBA8C /* SmokeParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = E8183A2A1EF1C13C00FFBA8C /* SmokeParticle.sks */; };
 		E8F631221EEB1B19000078D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F631211EEB1B19000078D2 /* AppDelegate.swift */; };
 		E8F631281EEB1B19000078D2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F631271EEB1B19000078D2 /* GameScene.swift */; };
 		E8F6312A1EEB1B19000078D2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F631291EEB1B19000078D2 /* GameViewController.swift */; };
@@ -53,6 +56,9 @@
 /* Begin PBXFileReference section */
 		E80F0B171EF0722B0086ACC8 /* GameScene+SKPhysicsContactDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+SKPhysicsContactDelegate.swift"; sourceTree = "<group>"; };
 		E80F0B191EF0733E0086ACC8 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		E8183A261EF1BAAA00FFBA8C /* SnowParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SnowParticle.sks; sourceTree = "<group>"; };
+		E8183A281EF1C09200FFBA8C /* FireParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticle.sks; sourceTree = "<group>"; };
+		E8183A2A1EF1C13C00FFBA8C /* SmokeParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SmokeParticle.sks; sourceTree = "<group>"; };
 		E8F6311E1EEB1B19000078D2 /* PrimeiroJogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeiroJogo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F631211EEB1B19000078D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8F631271EEB1B19000078D2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -148,8 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				E8F6313E1EEB292A000078D2 /* GameLayer.swift */,
-				E8F631401EEB29D0000078D2 /* HUDLayer.swift */,
 				E8F631421EEB2A53000078D2 /* BackgroundLayer.swift */,
+				E8F631401EEB29D0000078D2 /* HUDLayer.swift */,
 			);
 			name = Layers;
 			sourceTree = "<group>";
@@ -192,6 +198,9 @@
 				E8F631611EEB365C000078D2 /* Background */,
 				E8F6315A1EEB3635000078D2 /* Characters */,
 				E8F631451EEB35FB000078D2 /* Audio */,
+				E8183A261EF1BAAA00FFBA8C /* SnowParticle.sks */,
+				E8183A281EF1C09200FFBA8C /* FireParticle.sks */,
+				E8183A2A1EF1C13C00FFBA8C /* SmokeParticle.sks */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -312,8 +321,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8183A291EF1C09200FFBA8C /* FireParticle.sks in Resources */,
 				E8F631791EEB3679000078D2 /* 013-tap.wav in Resources */,
 				E8F6316C1EEB366B000078D2 /* Snow_Layer_02.png in Resources */,
+				E8183A2B1EF1C13C00FFBA8C /* SmokeParticle.sks in Resources */,
 				E8F631561EEB362B000078D2 /* Jelly7.png in Resources */,
 				E8F631551EEB362B000078D2 /* Jelly6.png in Resources */,
 				E8F631531EEB362B000078D2 /* Jelly4.png in Resources */,
@@ -328,6 +339,7 @@
 				E8F6312D1EEB1B19000078D2 /* Main.storyboard in Resources */,
 				E8F6317B1EEB3679000078D2 /* 020-explosion1.wav in Resources */,
 				E8F6316E1EEB366B000078D2 /* Snow_Layer_04.png in Resources */,
+				E8183A271EF1BAAA00FFBA8C /* SnowParticle.sks in Resources */,
 				E8F6315F1EEB3656000078D2 /* Wolf2.png in Resources */,
 				E8F6312F1EEB1B19000078D2 /* Assets.xcassets in Resources */,
 				E8F631781EEB3679000078D2 /* 009-Jump.wav in Resources */,

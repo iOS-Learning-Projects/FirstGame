@@ -21,7 +21,8 @@ class GameLayer: SKNode {
         self.zPosition = 1
         self.addChild(self.player)
 
-        self.friendGenerator(waitingTime: 0.5, sceneSize: sceneSize)
+        self.friendGenerator(waitingTime: 10, sceneSize: sceneSize)
+        self.createEmitterParticle(with: "SnowParticle")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -84,5 +85,12 @@ class GameLayer: SKNode {
         let repeatForever = SKAction.repeatForever(sequence)
 
         self.run(repeatForever)
+    }
+
+    // name: SnowParticle
+    func createEmitterParticle(with name: String) {
+        let emitter = SKEmitterNode(fileNamed: name)!
+        self.addChild(emitter)
+
     }
 }
